@@ -51,11 +51,12 @@
                 <!-- 열의 속성값을 나타내는 코드를 작성해주세요 (예 : 카테고리, 브랜드, 상품명, 가격) -->
                 <tr>
                     <th scope="col"></th>
-                    <th scope="col">브랜드</th>
-                    <th scope="col">상품명</th>
-                    <th scope="col">출시가격</th>
-                    <th scope="col">최근거래가</th>
-                    <th scope="col">관심수</th>
+                    <th scope="col" onclick="sortTable(0)">브랜드</th>
+                    <th scope="col" onclick="sortTable(1)">상품명</th>
+                    <th scope="col" onclick="sortTable(2)">출시가격</th>
+                    <th scope="col" onclick="sortTable(3)">최근거래가</th>
+                    <th scope="col" onclick="sortTable(4)">관심수</th>
+                    <th scope="col" onclick="sortTable(5)">가격변동</th>
                   </tr>
             </thead>
             <tbody id="data-table">
@@ -67,6 +68,7 @@
                 <td>{{ i[2] }}</td>
                 <td>{{ i[3] }}</td>
                 <td>{{ i[4] }}</td>
+                <td>{{ i[3]-i[2] }}</td>
               </tr>
               {% endfor %}
               <!-- 추후 크롤링한 데이터가 들어가는 자리 -->
